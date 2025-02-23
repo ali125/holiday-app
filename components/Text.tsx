@@ -13,7 +13,7 @@ type TypographyVariant =
 
 type TextComponentProps = TextProps & {
   className?: string;
-  variant: TypographyVariant;
+  variant?: TypographyVariant;
 };
 
 const variantStyles: Record<TypographyVariant, string> = {
@@ -28,7 +28,7 @@ const variantStyles: Record<TypographyVariant, string> = {
 };
 
 const Text: React.FC<TextComponentProps> = ({
-  variant = 'title',
+  variant = 'body',
   className,
   children,
   ...props
