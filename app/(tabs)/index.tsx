@@ -13,6 +13,7 @@ const Home = () => {
         data={PROPERTIES}
         renderItem={({ item }) => <Card property={item} />}
         keyExtractor={(item) => item.id}
+        showsVerticalScrollIndicator={false}
       />
     </Container>
   );

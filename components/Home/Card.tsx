@@ -4,6 +4,7 @@ import Image from '../Image';
 import { BlurView } from 'expo-blur';
 import { Ionicons } from '@expo/vector-icons';
 import Text from '../Text';
+import Carousel from '../Carousel';
 
 type Props = {
   property: Property;
@@ -14,16 +15,16 @@ const Card: React.FC<Props> = ({ property }) => {
     <View className="border-b border-gray-200 px-4 py-4">
       <View className="relative">
         <View>
-          <Image source={property.images[0]} style={{ height: 320 }} />
+          <Carousel data={property.images} />
         </View>
         <View>
           <BlurView
             intensity={10}
-            className="absolute bottom-8 left-8 flex flex-row overflow-hidden rounded-2xl p-2">
+            className="absolute bottom-4 left-4 flex flex-row overflow-hidden rounded-2xl p-2">
             <Ionicons name="star" size={24} color="#facc15" />
             <Text className="mx-2 text-white">5</Text>
           </BlurView>
-          <Pressable className="absolute bottom-8 right-8">
+          <Pressable className="absolute bottom-4 right-4">
             <BlurView className="overflow-hidden rounded-2xl p-2">
               <Ionicons
                 name={property.is_favorite ? 'heart' : 'heart-outline'}
