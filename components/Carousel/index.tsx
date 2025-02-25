@@ -34,7 +34,7 @@ const Carousel: React.FC<Props> = ({ data }) => {
         onProgressChange={progressValue}
         renderItem={({ item: imageUri }) => (
           <View className="mx-1">
-            <Image source={imageUri} />
+            <Image source={imageUri} style={{ borderRadius: 40 }} />
           </View>
         )}
       />
