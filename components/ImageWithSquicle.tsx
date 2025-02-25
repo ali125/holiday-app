@@ -1,6 +1,6 @@
-import { Image, useImage } from '@shopify/react-native-skia';
 import React from 'react';
-import Squircle from 'react-native-squircle';
+import { SquircleView } from 'react-native-figma-squircle';
+import Image from './Image';
 
 type Props = {
   image: string;
@@ -15,14 +15,15 @@ const ImageWithSquicle: React.FC<Props> = ({
   height = 280,
   borderRadius = 40,
 }) => {
-  const imageUrl = useImage(image);
-
   return (
-    <Squircle
+    <SquircleView
       style={{ width, height, marginHorizontal: 4 }}
-      borderRadius={borderRadius}
-      maskChildren={<Image width={width} height={height} image={imageUrl} fit="cover" />}
-    />
+      squircleParams={{
+        cornerSmoothing: 0.7,
+        cornerRadius: borderRadius,
+      }}>
+      <Image source={image} style={{ borderRadius }} />
+    </SquircleView>
   );
 };
 

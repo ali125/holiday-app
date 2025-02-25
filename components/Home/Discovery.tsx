@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList, Pressable, View } from 'react-native';
-import { SquircleView } from 'expo-squircle-view';
+import { SquircleView } from 'react-native-figma-squircle';
 import { BlurView } from 'expo-blur';
 import ImageWithSquicle from '../ImageWithSquicle';
 import Text from '../Text';
@@ -17,15 +17,17 @@ const Discovery: React.FC<Props> = ({ properties }) => {
       showsHorizontalScrollIndicator={false}
       data={properties.reverse()}
       renderItem={({ item }) => (
-        <SquircleView className="mx-4">
-          {/* <ImageWithSquicle image={item.images[1]} /> */}
+        <View className="mx-4">
+          <ImageWithSquicle image={item.images[1]} />
           <SquircleView
-            cornerSmoothing={100}
-            preserveSmoothing
-            borderRadius={24}
+            squircleParams={{
+              cornerSmoothing: 0.7,
+              cornerRadius: 24,
+            }}
             style={{
               overflow: 'hidden',
               position: 'absolute',
+              borderRadius: 24,
               bottom: 16,
               left: 24,
               right: 24,
@@ -44,7 +46,7 @@ const Discovery: React.FC<Props> = ({ properties }) => {
               </Pressable>
             </BlurView>
           </SquircleView>
-        </SquircleView>
+        </View>
       )}
       keyExtractor={(item) => item.id}
     />
