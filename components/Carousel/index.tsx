@@ -54,7 +54,7 @@ const Carousel: React.FC<Props> = ({ data }) => {
             height: 8,
             borderRadius: 4,
             marginHorizontal: 4,
-            backgroundColor: '#000',
+            backgroundColor: '#F3EFE9',
           }}
           onPress={onPressPagination}
         />
