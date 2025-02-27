@@ -5,7 +5,7 @@ import { PRIMARY_COLOR } from '~/core/theme/colors';
 
 const MainHeader = () => {
   return (
-    <View className="px-4 pb-4">
+    <View className="px-4 pb-4 pt-2">
       <View className="flex flex-row items-center justify-between">
         <Image
           source={require('assets/images/logo.png')}

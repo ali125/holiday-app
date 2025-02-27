@@ -17,12 +17,13 @@ const Discovery: React.FC<Props> = ({ properties }) => {
       showsHorizontalScrollIndicator={false}
       data={properties.reverse()}
       renderItem={({ item }) => (
-        <View className="mx-4">
+        <View className="mx-3">
           <ImageWithSquicle image={item.images[1]} />
           <SquircleView
             squircleParams={{
               cornerSmoothing: 0.7,
               cornerRadius: 24,
+              fillColor: '#0009',
             }}
             style={{
               overflow: 'hidden',

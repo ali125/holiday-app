@@ -1,14 +1,22 @@
-import { FlatList } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { FlatList, Pressable, View } from 'react-native';
 import { Container } from '~/components/Container';
 import Card from '~/components/Home/Card';
 import Discovery from '~/components/Home/Discovery';
 import MainHeader from '~/components/Layout/MainHeader';
+import Text from '~/components/Text';
 import { PROPERTIES } from '~/core/constants/data';
 
 const Home = () => {
   return (
     <Container>
       <MainHeader />
+      <Pressable className="mx-4 mb-4 flex flex-row items-center rounded-2xl bg-[#f5f5f5] px-6 py-4">
+        <Ionicons name="search" size={24} color="gray" />
+        <View className="mx-4">
+          <Text className="text-gray-400">Where to?</Text>
+        </View>
+      </Pressable>
       <FlatList
         data={PROPERTIES}
         ListHeaderComponent={() => <Discovery properties={PROPERTIES} />}
