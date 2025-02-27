@@ -16,12 +16,6 @@ const Favorite = () => {
         renderItem={({ item }) => <FavoriteCard property={item} />}
         keyExtractor={(item) => item.id}
       />
-      {/* <FlatList
-        numColumns={2}
-        data={FAVORITES}
-        renderItem={({ item }) => <FavoriteCard property={item} />}
-        keyExtractor={(item) => item.id}
-      /> */}
     </Container>
   );
 };
