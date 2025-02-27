@@ -19,6 +19,11 @@ interface Property {
   rating?: number;
 }
 
+interface FavoriteProperty extends Property {
+  widthRatio: number;
+  heightRatio: number;
+}
+
 interface User {
   id: string;
   name: string;

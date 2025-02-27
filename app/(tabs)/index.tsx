@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { FlatList, Pressable, View } from 'react-native';
 import { Container } from '~/components/Container';
-import Card from '~/components/Home/Card';
+import HomeCard from '~/components/Home/HomeCard';
 import Discovery from '~/components/Home/Discovery';
 import MainHeader from '~/components/Layout/MainHeader';
 import Text from '~/components/Text';
@@ -20,7 +20,7 @@ const Home = () => {
       <FlatList
         data={PROPERTIES}
         ListHeaderComponent={() => <Discovery properties={PROPERTIES} />}
-        renderItem={({ item }) => <Card property={item} />}
+        renderItem={({ item }) => <HomeCard property={item} />}
         keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
       />

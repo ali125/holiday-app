@@ -10,7 +10,7 @@ type Props = {
   property: Property;
 };
 
-const Card: React.FC<Props> = ({ property }) => {
+const HomeCard: React.FC<Props> = ({ property }) => {
   return (
     <View className="border-b border-gray-200 px-4 py-4">
       <View className="relative">
@@ -54,4 +54,4 @@ const Card: React.FC<Props> = ({ property }) => {
   );
 };
 
-export default Card;
+export default HomeCard;

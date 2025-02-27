@@ -13,8 +13,8 @@ const Header: React.FC<Props> = ({ title }) => {
     router.back();
   };
   return (
-    <View className="mb-4 flex flex-row items-center justify-between pb-2">
-      <View className="flex flex-row items-center justify-center">
+    <View className="flex flex-row items-center justify-between px-4 py-4">
+      <View className="flex flex-row items-center justify-center gap-2">
         <Pressable onPress={onBack}>
           <Ionicons name="arrow-back" size={24} />
         </Pressable>

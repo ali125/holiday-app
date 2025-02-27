@@ -1,11 +1,12 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { Container } from '~/components/Container';
+import Header from '~/components/Layout/Header';
 
 const Bookings = () => {
   return (
     <Container>
-      <Text>Bookings Page</Text>
+      <Header title="Bookings" />
     </Container>
   );
 };
