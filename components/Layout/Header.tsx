@@ -6,9 +6,13 @@ import Text from '../Text';
 
 type Props = {
   title: string;
+  headerAction?: {
+    name: keyof typeof Ionicons.glyphMap;
+    onPress: () => void;
+  };
 };
 
-const Header: React.FC<Props> = ({ title }) => {
+const Header: React.FC<Props> = ({ title, headerAction }) => {
   const onBack = () => {
     router.back();
   };
@@ -22,6 +26,12 @@ const Header: React.FC<Props> = ({ title }) => {
           {title}
         </Text>
       </View>
+
+      {headerAction && (
+        <Pressable onPress={headerAction.onPress}>
+          <Ionicons name={headerAction.name} size={24} />
+        </Pressable>
+      )}
     </View>
   );
 };
