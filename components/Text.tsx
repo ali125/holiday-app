@@ -3,6 +3,7 @@ import { twMerge } from 'tailwind-merge';
 
 type TypographyVariant =
   | 'title'
+  | 'subtitle-primary'
   | 'subtitle'
   | 'body'
   | 'caption'
@@ -19,6 +20,7 @@ type TextComponentProps = TextProps & {
 const variantStyles: Record<TypographyVariant, string> = {
   title: 'text-2xl font-bold',
   subtitle: 'text-xl font-semibold',
+  'subtitle-primary': 'text-xl font-semibold text-primary',
   body: 'text-base',
   'body-primary': 'text-base text-primary',
   caption: 'text-sm font-medium',

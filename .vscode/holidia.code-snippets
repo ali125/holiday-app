@@ -6,7 +6,7 @@
   },
   "ViewRow": {
     "prefix": "vr",
-    "body": ["<View className=\"flex flex-row items-center justify-center\">", "  $1", "</View>"],
+    "body": ["<View className=\"flex-row items-center justify-center\">", "  $1", "</View>"],
     "description": "A Simple Row View",
   },
   "Text": {
@@ -24,11 +24,12 @@
     "body": [
       "import { View } from 'react-native';",
       "",
-      "import Text from '~/components/text';",
+      "import Text from '~/components/Text';",
       "",
       "type Props = {",
       "  $2",
       "};",
+      "",
       "const ${1:CompName} = ({}: Props) => {",
       "  return (",
       "    <View>",
