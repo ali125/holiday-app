@@ -1,8 +1,8 @@
 import { View } from 'react-native';
-import ImageWithSquicle from '../ImageWithSquicle';
-import { WIDTH } from '~/core/utils/layout';
 import { BlurView } from 'expo-blur';
 import { Ionicons } from '@expo/vector-icons';
+import { WIDTH } from '~/core/utils/layout';
+import ImageWithSquicle from '../ImageWithSquicle';
 import Text from '../Text';
 
 type Props = {

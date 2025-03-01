@@ -7,8 +7,15 @@ import MainHeader from '~/components/Layout/MainHeader';
 import Text from '~/components/Text';
 import { PROPERTIES } from '~/core/constants/data';
 import { router } from 'expo-router';
+import { useEffect } from 'react';
 
 const Home = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      router.push('/welcome');
+    }, 1000);
+  }, []);
+
   return (
     <Container>
       <MainHeader />
